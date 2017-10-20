@@ -1,0 +1,36 @@
+/*universal*/
+
+
+
+/*topbar*/
+.topbar, .title_logo{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.title_logo{
+
+}
+
+.desktop_nav ul{
+  display: flex;
+}
+
+/*banner*/
+.banner{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/*prospective_student_info*/
+.prospective_student_info
+{
+}
+
+.prospective_student_info,.schedule, .campus_location, .lecturer{
+  display: flex;
+}

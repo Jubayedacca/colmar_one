@@ -312,7 +312,6 @@ font-size: 1.5rem;
   color: #F6f6f6;
 }
 
-
 .courses{
   padding: 2rem 4.5rem;
   box-sizing: border-box;
@@ -344,7 +343,7 @@ font-size: 1.5rem;
   padding-left: 1rem;
 }
 
-@media only screen and (max-width:780rem){
+@media only screen and (max-width: 500px){
   .courses{
     margin-left: 1rem;
     margin-right: 1rem;
@@ -354,6 +353,7 @@ font-size: 1.5rem;
     flex-direction: column;
     align-content: stretch;
   }
+
   .single_course{
     width:auto;
     padding: 0;
@@ -366,6 +366,7 @@ font-size: 1.5rem;
     padding-bottom: 1rem;
     text-align: center;
   }
+
   .single_course img, .single_course p{
     display: none;
   }
@@ -373,8 +374,6 @@ font-size: 1.5rem;
   .course_container h1{
     padding-bottom: 1rem;
   }
-
-
 }
 
 

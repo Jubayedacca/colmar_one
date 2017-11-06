@@ -1,36 +1,479 @@
-/*universal*/
+/*universal----------------------------------------------------------------*/
+body{
+  background-color: #F6f6f6;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 1.5rem;
+}
 
 
-
-/*topbar*/
-.topbar, .title_logo{
+/*topbar-------------------------------------------------------------------*/
+.topbar_desktop{
   display:flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  height: 4rem;
 }
 
 .title_logo{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  height: 2rem;
+  padding-left: 1.5rem;
+}
 
+.title_logo{
+  font-size: 2rem;
 }
 
 .desktop_nav ul{
   display: flex;
+  height: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
-/*banner*/
+.desktop_nav a{
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+text-decoration: none;
+color:#414141;
+font-size: 1.5rem;
+}
+
+.desktop_nav li:last-child{
+  padding-right: 1rem;
+}
+
+.mobile_nav{
+  display: none;
+}
+
+.title_last{
+  color: #F3E804;
+}
+
+@media only screen and (max-width:50rem) {
+ .title_logo{
+  font-size: 1.5rem;
+ }
+
+ .desktop_nav a{
+  font-size: 1.3rem;
+ }
+}
+
+@media only screen and (max-width:40.5rem){
+  .desktop_nav a{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width:39rem){
+  .topbar_desktop{
+    display: none;
+  }
+
+  .mobile_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 4rem;
+  }
+}
+
+
+/*banner--------------------------------------------------------------------*/
 .banner{
   display: flex;
   justify-content: center;
   align-content: center;
-  align-items: center;
+  width: 100%;
+  background-color: #414141;
+
 }
 
-/*prospective_student_info*/
-.prospective_student_info
-{
+.image_container{
+  width: 60%;
 }
 
-.prospective_student_info,.schedule, .campus_location, .lecturer{
+.banner img{
+  box-sizing: border-box;
+  padding:2rem 1.5rem;
+  max-width: 100%;
+}
+
+.banner_text{
+  width: 40%;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  padding-bottom:2rem;
+  padding-left: 1rem;
+}
+
+.banner_text h1{
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color:#F6f6f6;
+  line-height: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.banner_text h3{
+  font-size: 1.3rem;
+  color: #F6f6f6;
+  padding-bottom: 1.5rem;
+}
+
+.banner_text a{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #F3E804;
+  width: 80%;
+  text-align: center;
+}
+
+.banner_text a{
+  max-width: 90%;
+}
+
+@media only screen and (max-width:47rem){
+  .banner{
+    flex-direction: column;
+  }
+
+.image_container{
+    width: 100%;
+  }
+
+  .banner img{
+    padding: 0;
+  }
+
+  .banner_text{
+    width: 100%;
+  }
+
+  .banner_text a{
+    width: 100%;
+  }
+}
+
+/*prospectus----------------------------------------------------------------*/
+.prospectus{
+  display: flex;
+}
+
+.prospectus_story{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding-top:2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.prospectus_story h1{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prospectus_story p{
+  margin-top: auto;
+}
+
+.prospectus_image_container{
+  width: 100%;
+}
+
+.prospectus_image_container img{
+  max-width: 100%;
+}
+
+.prospectus_info{
+  width: 40%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.prospectus_info img{
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
+
+.schedule, .location, .lecturer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.lecturer{
+  background-color: #F3E804;
+}
+
+.schedule_text, .location_text, .lecturer_text{
+  width: 65%;
+}
+
+.schedule_text h1, .location_text h1, .lecturer_text h1{
+  padding-bottom: 0.5rem;
+}
+
+.schedule_text a, .location_text a, .lecturer_text a{
+  text-decoration: none;
+  color: black;
+}
+
+.schedule_text p, .location_text p, .lecturer_text p{
+  padding-bottom: 0.5rem;
+}
+
+/*medium screan */
+@media only screen and (max-width: 910px) {
+  .prospectus{
+    flex-direction: column;
+  }
+
+  .prospectus_info, .prospectus_story, .schedule_text, .location_text, .lecturer_text{
+    width: 100%;
+  }
+
+  .prospectus_story p{
+    margin-top: 2rem;
+  }
+
+}
+
+/*small screan*/
+@media only screen and (max-width: 500px){
+  .prospectus_story{
+    display: none;
+  }
+
+  .schedule, .location, .lecturer{
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+  }
+
+  .schedule img, .location img, .lecturer img{
+    width: 100%;
+
+  }
+
+  .schedule_text,.location_text,.lecturer_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 1rem;
+
+  }
+}
+
+
+/*courses--------------------------------------------------------------------*/
+.course_container{
+  background-color: #414141;
+  width: 100%;
+}
+
+.course_container h1{
+  padding-top:2rem;
+  text-align: center;
+  color: #F6f6f6;
+}
+
+
+.courses{
+  padding: 2rem 4.5rem;
+  box-sizing: border-box;
+  width:100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single_course{
+  width: 30%;
+  background-color: white;
+  padding-bottom: 1.5rem;
+  margin: 1rem;
+  }
+
+.single_course img{
+  width:100%;
+}
+
+.single_course h2{
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.single_course p{
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width:780rem){
+  .courses{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: auto;
+    padding: 0;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-content: stretch;
+  }
+  .single_course{
+    width:auto;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    background-color: #F3E804;
+  }
+
+  .single_course h2{
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  .single_course img, .single_course p{
+    display: none;
+  }
+
+  .course_container h1{
+    padding-bottom: 1rem;
+  }
+
+
+}
+
+
+/*thesis_exhibit-------------------------------------------------------------*/
+
+.title h1{
+  padding-top:2rem;
+  text-align: center;
+}
+
+.thesis{
+  display: flex;
+}
+
+.main_thesis{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding-top:2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.main_thesis h1{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main_thesis video {
+  width: 100%;
+}
+
+.other_thesis{
+  width: 40%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.other_thesis_top, .other_thesis_bottom{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.other_thesis_top{
+  background-color: #F3E804;
+
+}
+.other_thesis img{
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
+
+.other_thesis_text{
+  width: 65%;
+}
+
+@media only screen and (max-width: 800px){
+  .other_thesis{
+    display: none;
+  }
+
+  .main_thesis{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .main_thesis h1, .main_thesis p{
+    display: none;
+  }
+}
+
+
+/*footer-------------------------------------------------------------------*/
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 0.1px solid #3F3E3E;
+}
+
+.footer_link a{
+  text-decoration: none;
+  color: #3F3E3E;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 500px){
+  .footer_link{
+    display: none;
+  }
 }
